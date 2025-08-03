@@ -12,21 +12,22 @@ const Profile = () => {
   const router = useRouter();
 
   const handleLogOut = () => {
-    Cookies.remove('token')
+    Cookies.remove("token");
+    Cookies.remove("role");
     router.push("/authentication/login");
   };
   return (
-    <li className="profile-nav onhover-dropdown pe-0 py-0">
-      <div className="media profile-media">
-        <Image className="b-r-10" src="/assets/images/dashboard/profile.png" alt="" width={35} height={35}/>
-        <div className="media-body">
+    <li className='profile-nav onhover-dropdown pe-0 py-0'>
+      <div className='media profile-media'>
+        <Image className='b-r-10' src='/assets/images/dashboard/profile.png' alt='' width={35} height={35} />
+        <div className='media-body'>
           <span>{EmayWalter}</span>
-          <p className="mb-0 font-roboto">
-            {Admin} <i className="middle fa fa-angle-down" />
+          <p className='mb-0 font-roboto'>
+            {Admin} <i className='middle fa fa-angle-down' />
           </p>
         </div>
       </div>
-      <ul className="profile-dropdown onhover-show-div">
+      <ul className='profile-dropdown onhover-show-div'>
         {profileListData &&
           profileListData.map((item, index) => (
             <li key={index}>
@@ -37,7 +38,7 @@ const Profile = () => {
             </li>
           ))}
         <li onClick={handleLogOut}>
-          <a href="#123">
+          <a href='#123'>
             <FeatherIconCom iconName={"LogIn"} />
             <span>{Logout}</span>
           </a>

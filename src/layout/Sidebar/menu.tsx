@@ -2,65 +2,30 @@ import { sidebarMenuType } from "Types/LayoutDataType";
 
 export const MenuList: sidebarMenuType[] = [
   {
-    title: "General",
+    title: "",
     menucontent: "Dashboards,Widgets",
     Items: [
       {
-        title: "Dashboards",
+        path: "/ekyc",
+        type: "link",
+        title: "eKYC",
         id: 1,
-        icon: "home",
-        pathSlice: "dashboard",
-        type: "sub",
-        badge: "badge badge-light-primary",
-        // badgetxt: "8",
-        children: [
-          { path: "/dashboard/default", title: "Default", type: "link" },
-          {
-            title: "Users",
-            // icon: "user",
-            type: "sub",
-            pathSlice: "users",
-            // active: false,
-            children: [
-              {
-                bookmark: true,
-                path: "/app/users/profile",
-                type: "link",
-                title: "eKYC",
-              },
-              { path: "/app/users/edit", type: "link", title: "Users Edit" },
-              { path: "/app/users/cards", type: "link", title: "Users Cards" },
-            ],
-          },
-          // { path: "/dashboard/e-commerce", title: "Ecommerce", type: "link" },
-          // {
-          //   path: "/dashboard/online-course",
-          //   title: "Online Course",
-          //   type: "link",
-          // },
-          // { path: "/dashboard/crypto", title: "Crypto", type: "link" },
-          // { path: "/dashboard/social", title: "Social", type: "link" },
-          // { path: "/dashboard/nft", title: "NFT", type: "link" },
-          // {
-          //   path: "/dashboard/school-management",
-          //   title: "School Management",
-          //   type: "link",
-          // },
-          // { path: "/dashboard/pos", title: "POS", type: "link" },
-        ],
+        role: "USER",
       },
-      // {
-      //   title: "Widgets",
-      //   id: 2,
-      //   icon: "widget",
-      //   pathSlice: "widgets",
-      //   type: "sub",
-      //   active: false,
-      //   children: [
-      //     { path: "/widgets/general", title: "General", type: "link" },
-      //     { path: "/widgets/chart", title: "Chart", type: "link" },
-      //   ],
-      // },
+      {
+        path: "/admin/users",
+        type: "link",
+        title: "Quản lý tài khoản",
+        id: 2,
+        role: "ADMIN",
+      },
+      {
+        path: "/admin/deep-search",
+        type: "link",
+        title: "Tìm kiếm nâng cao",
+        id: 3,
+        role: "ADMIN",
+      },
     ],
   },
   // {

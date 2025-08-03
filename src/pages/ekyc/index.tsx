@@ -24,7 +24,7 @@ export default function eKYC() {
 
   return (
     <div className='page-body'>
-      <Breadcrumbs title={eKyc} mainTitle='' parent={Home} />
+      <Breadcrumbs title={eKyc} mainTitle='' parent='Trang chủ' />
       <Card className='p-3'>
         <div className='mb-3'>
           <h4 className='mb-2'>Thông tin khách hàng qua CCCD/CMND</h4>
