@@ -3,14 +3,11 @@ import { NextResponse } from "next/server";
 
 export function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
-  if (
-    path.split("/")[1] !== "authentication" &&
-    !request.cookies.has("token")
-  ) {
+  if (path.split("/")[1] !== "authentication" && !request.cookies.has("token")) {
     return NextResponse.redirect(new URL("/authentication/login", request.url));
   }
   if (path.split("/")[1] === "authentication" && request.cookies.has("token")) {
-    return NextResponse.redirect(new URL(`/dashboard/default`, request.url));
+    return NextResponse.redirect(new URL(`/ekyc`, request.url));
   }
 }
 

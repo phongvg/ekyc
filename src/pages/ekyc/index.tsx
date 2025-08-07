@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 export default function eKYC() {
   const [frontImage, setFrontImage] = useState<string | null>(null);
   const [backImage, setBackImage] = useState<string | null>(null);
+  const [portraitImage, setPortraitImage] = useState<string | null>(null);
   const router = useRouter();
 
   const nextStep = () => {
@@ -40,6 +41,9 @@ export default function eKYC() {
           <Col md='6'>
             <IDCardCapture title='Ảnh mặt sau CMND/CCCD' image={backImage} onImageCaptured={setBackImage} />
           </Col>
+          <Col md='12' className='mt-4'>
+            <IDCardCapture title='Ảnh chân dung' image={portraitImage} onImageCaptured={setPortraitImage} />
+          </Col>
         </Row>
       </Card>
 
@@ -49,7 +53,7 @@ export default function eKYC() {
             Quay lại
           </Button>
           <Button color='primary' onClick={nextStep}>
-            Tiếp tục
+            Xác nhận
           </Button>
         </div>
       </Card>

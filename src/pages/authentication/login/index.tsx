@@ -59,14 +59,14 @@ const Login = () => {
             <div>
               <div className='login-main'>
                 <form className='theme-form' onSubmit={formSubmitHandle}>
-                  <h4>{SignInAccount}</h4>
-                  <p>{EnterEmailPasswordLogin}</p>
+                  <h4>Đăng nhập tài khoản</h4>
+                  <p>Vui lòng nhập email và mật khẩu của bạn</p>
                   <FormGroup>
-                    <Label className='col-form-label'>{EmailAddress}</Label>
+                    <Label className='col-form-label'>Email</Label>
                     <Input type='email' required placeholder='Test@gmail.com' value={email} name='email' onChange={handleUserValue} />
                   </FormGroup>
                   <FormGroup>
-                    <Label className='col-form-label'>{Password}</Label>
+                    <Label className='col-form-label'>Mật khẩu</Label>
                     <div className='form-input position-relative'>
                       <Input
                         type={showPassWord ? "text" : "password"}
@@ -79,44 +79,16 @@ const Login = () => {
                         <span onClick={() => setShowPassWord(!showPassWord)} className={!showPassWord ? "show" : ""} />
                       </div>
                     </div>
-                  </FormGroup>
-                  <FormGroup className='mb-0 form-group'>
-                    <div className='checkbox p-0'>
-                      <Input id='checkbox1' type='checkbox' />
-                      <Label className='text-muted' htmlFor='checkbox1'>
-                        {RememberPassword}
-                      </Label>
-                    </div>
-                    <Link className='link' href='/pages/authentication/forget-pwd'>
-                      {ForgotPassword}
-                    </Link>
                     <div className='text-end mt-3'>
                       <Button color='primary' className='btn-block w-100' type='submit'>
-                        {SignIn}
+                        Đăng nhập
                       </Button>
                     </div>
                   </FormGroup>
-                  <h6 className='text-muted mt-4 or'>{SignInWith}</h6>
-                  <div className='social mt-4'>
-                    <div className='btn-showcase'>
-                      <a className='btn btn-light' href='https://www.linkedin.com/login' target='_blank' rel='noreferrer'>
-                        {" "}
-                        <Linkedin className='txt-linkedin' /> {linkedInHeading}
-                      </a>
-                      <a className='btn btn-light' href='https://twitter.com/login?lang=en' target='_blank' rel='noreferrer'>
-                        <Twitter className='txt-twitter' />
-                        {TwitterHeading}
-                      </a>
-                      <a className='btn btn-light' href='https://www.facebook.com/' target='_blank' rel='noreferrer'>
-                        <Facebook className='txt-fb' />
-                        {FacebookHeading}
-                      </a>
-                    </div>
-                  </div>
                   <p className='mt-4 mb-0 text-center'>
-                    {DoNotAccount}
+                    Chưa có tài khoản?
                     <Link className='ms-2' href='/pages/authentication/register-simple'>
-                      {CreateAccount}
+                      Tạo tài khoản
                     </Link>
                   </p>
                 </form>
